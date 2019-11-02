@@ -7,31 +7,48 @@ clc;
 close all;
 
 %{ 
-Variables
+Variables:
 analysisLength = length of analysis asked for(years)
-breakeven = time until profit = cost (weeks)
+breakevenOne = 
+breakevenX = 
+breakevenY = 
 breakevenDonation = amount of donation funds to break even (USD)
 constructionCost = cost of all construction needs (USD)
 constructionTime = time until construction is complete (weeks)
 costChart = costs to run over time (USD/week)
+costSlope = costs run over time in slope form (USD/week)
 energyCost = cost for energy requirements (USD/week)
+ftToIn = conversion to turn feet to inches
 laborCost = cost to pay for labor (USD/week)
 landfillCost = cost to remove trash (USD/week)
-maintenanceCost = cost for repairs and upkeep (USD/week)
+maintenanceCost = cost for repairs and upkeep (USD/week) 
+material = material of object
+materialCost = costs for the material (USD/week)
+materialList = contains list of materials
+materialName = name of material used for the object
 miscCosts = any forseeable additional costs (USD/week)
 profitChart = "this is a profit.....chart" (USD/year)
+profitSlope = slope for profit (USD/year)
+projectBreakevenX = 
+projectBreakevenY = 
 revenueChart = a table of revenue (USD/year)
+revenueSlope = slope for revenue (USD/year)
+surfaceArea = total surface area of the wall
 ticketPrice = THE price of an admission ticket..no favoritsm (USD)
-wallCost = Cost for constructing wall, based on material used (USD)
+wallCost = cost for constructing wall, based on material used (USD)
 wallThickness = wall thickness based on material (inches)
+wallTotalCost = total cost of the wall (USD)
 weeklyCost = cost per week (USD/week)
 weeklyDonations = amount of donations (USD/week)
+weeklyRevenue = revenue made weekly (USD)
 weeklySales = income for weekly sales (USD/week)
 weeklyVisitors = vistiors (people/week)
 weeksOpen = number of weeks open (#/year)
 workerCost = total cost of labor to complete construction (USD)
 workerCount = number of workers needed to complete construction (#)
 workerPay = amount the workers get paid (USD)
+yearToMonth = conversion form years to months
+yearsRequested = number of years requested
 %} 
 
 % Baseline information
@@ -116,6 +133,7 @@ ylabel('$ Millions');
 grid on; % showing gridlines
 legend({'Total Cost','Revenue'},'Location','Best'); % placing the legend
 hold off;
+
 % adding the second plot as a figure
 figure;
 profitSlope = revenueSlope-costSlope; % setting the slope
